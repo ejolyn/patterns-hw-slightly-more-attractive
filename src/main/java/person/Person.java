@@ -4,30 +4,35 @@ import person.appearance.Appearance;
 
 public class Person {
 
-    private final String id;
-    private final String lastName;
-    private final String firstName;
-    private final String middleName;
-    private final Physical phys;
-    private final Appearance appearance;
-    private final Phone phone;
+    private String id;
+    private String lastName;
+    private String firstName;
+    private String middleName;
+    private Physical phys;
+    private Appearance appearance;
+    private Phone phone;
 
-    public Person(final String id,
-                  final String lastName,
-                  final String firstName,
-                  final String middleName,
-                  final Physical phys,
-                  final Appearance appearance,
-                  final Phone phone) {
+    public final void setId(final String id) {
         this.id = id;
+    }
+    public final void setLastName(final String lastName) {
         this.lastName = lastName;
+    }
+    public final void setFirstName(final String firstName) {
         this.firstName = firstName;
+    }
+    public final void setMiddleName(final String middleName) {
         this.middleName = middleName;
+    }
+    public final void setPhys(final Physical phys) {
         this.phys = phys;
+    }
+    public final void setAppearance(final Appearance appearance) {
         this.appearance = appearance;
+    }
+    public final void setPhone(final Phone phone) {
         this.phone = phone;
     }
-
 
     @Override
     public final String toString() {
