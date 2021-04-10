@@ -9,7 +9,7 @@ import person.appearance.hair.ShortHair;
 
 import java.util.HashMap;
 
-public class AppearanceGenerator implements Generator<Appearance> {
+public class AppearanceGenerator extends Generator<Appearance> {
 
     private String eyes;
     private int hairLength;

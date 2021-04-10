@@ -5,9 +5,9 @@ import person.Fio;
 import static utils.FileReader.getLinesFromFile;
 import static utils.MyMath.getDigitsSum;
 
-public class FioGenerator {
+public class FioGenerator extends Generator<Fio> {
 
-    private Fio fio = new Fio();
+    private final Fio fio = new Fio();
 
     /**
      * ФИО берутся из соответствующих файлов по индексу в листе:
@@ -17,6 +17,7 @@ public class FioGenerator {
      *
      * @param code код для генерации
      */
+    @Override
     public final void generateParams(final int code) {
         final int lastNameIndex = getDigitsSum(code);
         final String sex = (lastNameIndex % 2 == 0) ? "f" : "m";
@@ -24,8 +25,8 @@ public class FioGenerator {
         setFirstNameFromFile(getDigitsSum(code / 100), sex);
         setMiddleNameFromFile(getDigitsSum(code % 100), sex);
     }
-
-    public final Fio getFio() {
+    @Override
+    public final Fio buildResponse() {
        return fio;
    }
     private void setLastNameFromFile(final int i, final String sex) {

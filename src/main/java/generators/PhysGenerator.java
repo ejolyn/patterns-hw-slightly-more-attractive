@@ -2,7 +2,7 @@ package generators;
 
 import person.Physical;
 
-public class PhysGenerator implements Generator<Physical> {
+public class PhysGenerator extends Generator<Physical> {
 
     private int age;
     private int weight;
